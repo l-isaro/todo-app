@@ -25,6 +25,7 @@ body {
   border: 2px solid #ddd;
   border-radius: 4px;
   margin-right: 10px;
+  margin-bottom: 20px;
 }
 
 #todo-form button {
