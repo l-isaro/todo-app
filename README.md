@@ -7,6 +7,7 @@ Welcome to the ToDo App! This simple yet powerful application helps you organize
 ## **Features**
 
 Easy Task Management: Add, edit, and delete tasks with ease.
+
 Responsive Design: Enjoy a seamless experience across devices with our responsive design.
 
 ## **Contributing**
