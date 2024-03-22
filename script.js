@@ -21,5 +21,25 @@ function addTask(task) {
   taskText.textContent = task;
   listItem.appendChild(taskText);
 
-  const checkBox = todoList.appendChild(listItem);
+  const checkBox = document.createElement("input");
+  checkBox.setAttribute("type", "checkBox");
+  listItem.appendChild(checkBox);
+
+  const deleteButton = document.createElement("button");
+  deleteButton.textContent = "Delete";
+  listItem.appendChild(deleteButton);
+
+  todoList.appendChild(listItem);
 }
+
+checkBox.addEventListener("change", function () {
+  if (this.checked) {
+    taskText.style.textDecoration = "line-through";
+  } else {
+    taskText.style.textDecoration = "none";
+  }
+});
+
+deleteButton.addEventListener("click", function () {
+  todoList.removeChild(listItem);
+});
