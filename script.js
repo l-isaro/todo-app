@@ -17,7 +17,9 @@ todoForm.addEventListener("submit", function (event) {
 
 function addTask(task) {
   const listItem = document.createElement("li");
-  listItem.textContent = task;
+  const taskText = document.createElement("spam");
+  taskText.textContent = task;
+  listItem.appendChild(taskText);
 
-  todoList.appendChild(listItem);
+  const checkBox = todoList.appendChild(listItem);
 }
