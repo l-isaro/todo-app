@@ -17,12 +17,12 @@ todoForm.addEventListener("submit", function (event) {
 
 function addTask(task) {
   const listItem = document.createElement("li");
-  const taskText = document.createElement("spam");
+  const taskText = document.createElement("span");
   taskText.textContent = task;
   listItem.appendChild(taskText);
 
   const checkBox = document.createElement("input");
-  checkBox.setAttribute("type", "checkBox");
+  checkBox.setAttribute("type", "checkbox");
   listItem.appendChild(checkBox);
 
   const deleteButton = document.createElement("button");
@@ -30,16 +30,16 @@ function addTask(task) {
   listItem.appendChild(deleteButton);
 
   todoList.appendChild(listItem);
+
+  checkBox.addEventListener("change", function () {
+    if (checkBox.checked) {
+      taskText.style.textDecoration = "line-through";
+    } else {
+      taskText.style.textDecoration = "none";
+    }
+  });
+
+  deleteButton.addEventListener("click", function () {
+    todoList.removeChild(listItem);
+  });
 }
-
-checkBox.addEventListener("change", function () {
-  if (this.checked) {
-    taskText.style.textDecoration = "line-through";
-  } else {
-    taskText.style.textDecoration = "none";
-  }
-});
-
-deleteButton.addEventListener("click", function () {
-  todoList.removeChild(listItem);
-});
