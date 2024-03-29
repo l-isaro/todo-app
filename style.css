@@ -5,7 +5,7 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background: linear-gradient(to right, #6dd5fa, #ff758c);
+  background-image: linear-gradient(to bottom right, #9bafd9, #103783);
   color: #333;
 }
 
@@ -31,7 +31,7 @@ body {
 #todo-form button {
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: #5f9ea0;
+  background-color: #0b3866;
   color: white;
   border: none;
   border-radius: 4px;
