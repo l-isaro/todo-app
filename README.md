@@ -15,5 +15,6 @@ To run the application locally, follow these steps:
 
 ## **Assumptions and Decisions**
 
-Base Image: The Dockerfile uses the httpd:2.4 image as the base, which is a lightweight Apache HTTP Server image. This choice was made for its simplicity and compatibility with web applications.
-Working Directory: The working directory is set to /usr/local/apache2/htdocs/ to align with the default document root of the Apache server.
+**Base Image**: The Dockerfile uses the httpd:2.4 image as the base, which is a lightweight Apache HTTP Server image. This choice was made for its simplicity and compatibility with web applications.
+
+**Working Directory:** The working directory is set to /usr/local/apache2/htdocs/ to align with the default document root of the Apache server.
