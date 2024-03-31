@@ -31,6 +31,28 @@ function addTask(task) {
 
   todoList.appendChild(listItem);
 
+  const editButton = document.createElement("button");
+  editButton.textContent = "edit";
+  listItem.appendChild(editButton);
+
+  editButton.addEventListener("click", function () {
+    const isEditing = listItem.classList.contains("editing");
+
+    if (isEditing) {
+      taskText.textContent = this.previousSibling.value;
+      listItem.classList.remove("editing");
+      editButton.textContent = "Edit";
+    } else {
+      const input = document.createElement("input");
+      input.type = "text";
+      input.value = taskText.textContent;
+      listItem.insertBefore(input, taskText);
+      listItem.removeChild(taskText);
+      listItem.classList.add("editing");
+      editButton.textContent = "save";
+    }
+  });
+
   checkBox.addEventListener("change", function () {
     if (checkBox.checked) {
       taskText.style.textDecoration = "line-through";
